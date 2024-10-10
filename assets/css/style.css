@@ -1,0 +1,153 @@
+/* Login Page Tiles */
+.login-tile-button {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+}
+.login-tile-button img {
+    width: 40%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+.login-tile-button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay to ensure white text visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.login-tile-button:hover {
+    transform: scale(1.05);
+}
+.login-tile-button:hover .overlay {
+    opacity: 1;
+}
+.login-tile-button:hover img {
+    opacity: 0.7;
+}
+.btn-blue { background-color: #007bff; }
+.btn-teal { background-color: #1a8c88; }
+.btn-beige { background-color: #a67c52; }
+.btn-orange { background-color: #df5d2f; }
+.overlay span {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+/* Login Page Tiles */
+
+.register-tile-button {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+}
+.register-tile-button img {
+    width: 30%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+.register-tile-button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay to ensure white text visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.register-tile-button:hover {
+    transform: scale(1.05);
+}
+.register-tile-button:hover .overlay {
+    opacity: 1;
+}
+.register-tile-button:hover img {
+    opacity: 0.7;
+}
+.btn-blue { background-color: #007bff; }
+.btn-teal { background-color: #1a8c88; }
+.btn-beige { background-color: #a67c52; }
+.overlay span {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Banner */
+
+.banner .custom-bg {
+    background-color: #6a569e; /* Set background color */
+    color: white; /* Set text color */
+     /* Add padding for content */
+    height: 20vh; /* Set container height to viewport height */
+    border-top: 5px solid white; /* Add white border to the top */
+    border-bottom: 5px solid white; /* Add white border to the bottom */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: left; /* Center items horizontally */
+    text-align: center; /* Center text content */
+}
+.banner .custom-bg img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px; /* Add margin to separate image from tagline */
+}
+
+/* Footer */
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0;
+}
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer .social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+}
+.footer .newsletter input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+.footer .newsletter button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #007bff;
+    color: white;
+}
