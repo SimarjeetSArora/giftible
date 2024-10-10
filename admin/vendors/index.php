@@ -55,9 +55,9 @@
 							<td><?php echo ucwords($row['shop_owner']) ?></td>
 							<td class="text-center">
 								<?php if($row['status'] == 1): ?>
-									<span class="bage badge-success px-3 rounded-pill">Active</span>
+									<span class="bage badge-success px-3 rounded-pill">Verified</span>
 								<?php else: ?>
-									<span class="bage badge-danger px-3 rounded-pill">Inactive</span>
+									<span class="bage badge-danger px-3 rounded-pill">Non-Verified</span>
 								<?php endif; ?>
 							</td>
 							<td align="center">
@@ -68,8 +68,14 @@
 				                  <div class="dropdown-menu" role="menu">
 				                    <a class="dropdown-item" href="?page=vendors/manage_vendor&id=<?php echo $row['id'] ?>"><span class="fa fa-edit text-primary"></span> Edit</a>
 				                    <div class="dropdown-divider"></div>
-				                    <a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>
-				                  </div>
+
+									<a class="dropdown-item verify_data" href="?page=vendors/verify_vendor&id=<?php echo $row['id'] ?>" ><span class="fa fa-trash text-success"></span> Verify</a>
+									<div class="dropdown-divider"></div>
+								
+									<a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>
+								
+								</div>
+								  
 							</td>
 						</tr>
 					<?php endwhile; ?>
@@ -85,6 +91,7 @@
 			_conf("Are you sure to delete this vendor permanently?","delete_vendor",[$(this).attr('data-id')])
 		})
 		$('.table').dataTable();
+
 	})
 	function delete_vendor($id){
 		start_loader();
@@ -108,4 +115,5 @@
 			}
 		})
 	}
+	
 </script>
